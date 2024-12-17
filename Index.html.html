@@ -1,0 +1,286 @@
+<html><head><base href="." /><title>Mohammed Saud - CSE Student Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<style>
+:root {
+    --primary-color: #1a237e;  
+    --secondary-color: #0d47a1;
+    --accent-color: #2962ff;
+    --light-bg: #e3f2fd;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: var(--light-bg);
+    color: var(--primary-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+nav {
+    background: var(--primary-color);
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    margin: 0 1rem;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+nav a:hover {
+    background: var(--secondary-color);
+}
+
+.page {
+    display: none;
+    animation: fadeIn 0.5s;
+}
+
+.page.active {
+    display: block;
+}
+
+.profile-header {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.profile-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.profile-name {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.profile-title {
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+}
+
+.section {
+    background: white;
+    padding: 2rem;
+    margin: 1rem 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.section h2 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--light-bg);
+    padding-bottom: 0.5rem;
+}
+
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.skill-item {
+    background: var(--light-bg);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+.timeline {
+    position: relative;
+    padding: 1rem 0;
+}
+
+.timeline-item {
+    margin-bottom: 2rem;
+    padding-left: 2rem;
+    position: relative;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 12px;
+    height: 12px;
+    background: var(--secondary-color);
+    border-radius: 50%;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav a {
+        margin: 0.5rem 0;
+    }
+}
+</style>
+</head>
+<body>
+
+<nav>
+    <ul>
+        <li><a href="#resume" class="nav-link">Resume</a></li>
+        <li><a href="#biodata" class="nav-link">Bio Data</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+</nav>
+
+<div class="container">
+    <!-- Resume Page -->
+    <div id="resume" class="page active">
+        <div class="profile-header">
+            <svg class="profile-pic" viewBox="0 0 200 200">
+                <circle cx="100" cy="70" r="50" fill="#0d47a1"/>
+                <circle cx="100" cy="180" r="80" fill="#0d47a1"/>
+            </svg>
+            <h1 class="profile-name">Mohammed Saud</h1>
+            <p class="profile-title">Computer Science Engineering Student - MMEC College</p>
+        </div>
+
+        <div class="section">
+            <h2>Academic Summary</h2>
+            <p>Dedicated Computer Science Engineering student at MMEC College with a strong foundation in programming and software development. Passionate about emerging technologies and innovative solutions.</p>
+        </div>
+
+        <div class="section">
+            <h2>Technical Skills</h2>
+            <div class="skill-list">
+                <span class="skill-item">C++</span>
+                <span class="skill-item">Java</span>
+                <span class="skill-item">Python</span>
+                <span class="skill-item">Data Structures</span>
+                <span class="skill-item">Algorithms</span>
+                <span class="skill-item">Web Development</span>
+                <span class="skill-item">Database Management</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Academic Projects</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>Student Management System</h3>
+                    <p>6th Semester Project</p>
+                    <p>Developed a comprehensive system using Java and MySQL for managing student records.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Weather Monitoring Application</h3>
+                    <p>5th Semester Project</p>
+                    <p>Created a weather monitoring system using Python and IoT sensors.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bio Data Page -->
+    <div id="biodata" class="page">
+        <div class="section">
+            <h2>Personal Information</h2>
+            <p><strong>Name:</strong> Mohammed Saud</p>
+            <p><strong>Date of Birth:</strong> June 16, 2003</p>
+            <p><strong>School:</strong> LSA High School</p>
+            <p><strong>College:</strong> MMEC College</p>
+            <p><strong>Branch:</strong> Computer Science Engineering</p>
+            <p><strong>Current Year:</strong> 3rd Year</p>
+            <p><strong>Languages:</strong> English, Hindi, Marathi</p>
+        </div>
+
+        <div class="section">
+            <h2>Education</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>B.Tech in Computer Science Engineering</h3>
+                    <p>2021 - Present</p>
+                    <p>MMEC College</p>
+                    <p>Current CGPA: 8.5</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Higher Secondary Education (12th)</h3>
+                    <p>2020 - 2021</p>
+                    <p>LSA High School</p>
+                    <p>Percentage: 85%</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Page -->
+    <div id="contact" class="page">
+        <div class="section">
+            <h2>Contact Information</h2>
+            <p><strong>Email:</strong> mohammed.saud@mmec.edu.in</p>
+            <p><strong>Student ID:</strong> CSE2021045</p>
+            <p><strong>Phone:</strong> +91 98765 43210</p>
+            <p><strong>College Address:</strong> MMEC College Campus</p>
+        </div>
+
+        <div class="section">
+            <h2>Academic Achievements</h2>
+            <ul style="list-style-type: none;">
+                <li>• Department Topper in Data Structures</li>
+                <li>• Winner of College Coding Competition 2022</li>
+                <li>• Member of College Technical Club</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+$(document).ready(function() {
+    $('.nav-link').click(function(e) {
+        e.preventDefault();
+        const targetId = $(this).attr('href').substring(1);
+        $('.page').removeClass('active');
+        $(`#${targetId}`).addClass('active');
+    });
+
+    $('a[href^="#"]').on('click', function(e) {
+        e.preventDefault();
+        $('html, body').animate({
+            scrollTop: $($(this).attr('href')).offset().top - 70
+        }, 500);
+    });
+});
+</script>
+
+</body></html>
